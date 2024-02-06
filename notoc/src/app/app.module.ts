@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AwbComponent } from './awb/awb.component';
+import {HttpClientModule} from "@angular/common/http";
+import {AwbService} from "./awb/awb.service";
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { AwbComponent } from './awb/awb.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AwbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
